@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Shopping Assistant", 
+  "version": "1.0",
+  "description": "A Chrome extension that helps you shop smarter on Amazon.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "http://*.amazon.com/*",
+    "https://*.amazon.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*.amazon.com/*", "https://*.amazon.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "homepage_url": "https://github.com/your-username/amazon-shopping-assistant", // Replace with your GitHub repo
+  "repository_url": "https://github.com/your-username/amazon-shopping-assistant" // Replace with your GitHub repo
+}

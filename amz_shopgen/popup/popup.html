@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amazon Shopping Assistant</title>
+  <style>
+    #chat-container {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .message {
+      margin-bottom: 10px;
+    }
+    .bot {
+      color: blue;
+    }
+    .user {
+      color: green;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-container"></div>
+  <input type="text" id="user-input" placeholder="Type your message...">
+  <button id="send-button">Send</button>
+  <br />
+  <input type="text" id="budget-input" placeholder="Enter your budget...">
+  <input type="text" id="category-input" placeholder="Enter a preferred category...">
+  <input type="text" id="holiday-input" placeholder="Shopping for a holiday? (yes/no)">
+  <input type="text" id="gift-input" placeholder="Gift shopping? (yes/no)">
+  <script src="popup.js"></script>
+</body>
+</html>
